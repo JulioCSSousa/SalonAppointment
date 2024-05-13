@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "j+Z8Shq8i3l2v1RZv3hzVrGaJfFLwU8XZ0zPDtmqtmU=",
+  "Source": "SalonAppointment.Server",
+  "BasePath": "_content/SalonAppointment.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\julio\\source\\repos\\SalonAppointment\\salonappointment.client\\salonappointment.client.esproj",
+      "Version": 2,
+      "Source": "salonappointment.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
