@@ -8,7 +8,7 @@ namespace SalonAppointment.Server.Models
         public int Id { get; set; }
         [Required(ErrorMessage = "Nome do serviço requerido")]
         [StringLength(50)]
-        public string ServiceName { get; set; }
+        public string ServiceName { get; set; } = string.Empty;
         [Column("decimal(12,8)")]
         public decimal Price { get; set; }
 
