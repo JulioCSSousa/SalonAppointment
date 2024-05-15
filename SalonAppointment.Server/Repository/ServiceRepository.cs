@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.EntityFrameworkCore;
 using SalonAppointment.Server.Data;
 using SalonAppointment.Server.Models;
 using SalonAppointment.Server.Repository.Interface;
@@ -20,7 +21,8 @@ namespace SalonAppointment.Server.Repository
         }
         public async Task<Service> FindByIdAsync(int id)
         {
-            return _context.Services.FirstOrDefault(x => x.Id == id) ;
+            var service = _context.Services.FirstOrDefault(x => x.Id == id) ;
+            return service;
         }
 
         public async Task<Service> Create(Service service)
@@ -31,24 +33,14 @@ namespace SalonAppointment.Server.Repository
 
         public async Task<Service> Delete(Service service)
         {
- 
-            if (service != null)
-            {
-                throw new InvalidOperationException();
-            }
             _context.Services.Remove(service);
             return service;
         }
 
 
-        public async Task<Service> Update(int id, Service service)
+        public async Task<Service> Update(Service service)
         {
-            var servicedb = await _context.Services.FirstOrDefaultAsync(x => x.Id == id); 
-            if (servicedb != null)
-            {
-                throw new NullReferenceException();
-            }
-            _context.Services.Entry(service);
+            _context.Services.Entry(service).State = EntityState.Modified;
             return service;
         }
     }

@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using SalonAppointment.Server.Models;
 using SalonAppointment.Server.Repository.Interface;
+using System.Diagnostics.Eventing.Reader;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -20,64 +22,68 @@ namespace SalonAppointment.Server.Controllers
 
         // GET: api/<AppointmentController>
         [HttpGet]
-        public async Task<IEnumerable<Appointment>> GetAll()
+        public async Task<ActionResult<IEnumerable<Appointment>>> GetAll()
         {
-            return await _uow.AppointmentRepository.FindAllAsync();
-        }
-
-        // GET api/<AppointmentController>/5
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(Guid id)
-        {
-            try
-            {
-                await _uow.AppointmentRepository.FindByIdAsync(id);
-            }
-            catch (Exception ex)
-            {
-                return NotFound("Appointment not found"); 
-            }
-            return Ok(new List<Appointment>());
-        }
-
-        // POST api/<AppointmentController>
-        [HttpPost]
-        public async Task<IActionResult> Post([FromBody] Appointment appointment)
-        {
-            await _uow.AppointmentRepository.Create(appointment);
-            _uow.Commit();
+            var appointment = await _uow.AppointmentRepository.FindAllAsync();
             return Ok(appointment);
         }
 
-        // PUT api/<AppointmentController>/5
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Put(Guid id, [FromBody] Appointment appointment)
+        // GET api/<AppointmentController>/5
+        [HttpGet("{id:guid}")]
+        public async Task<ActionResult<Appointment>> GetById(Guid id)
         {
 
             var appoint = await _uow.AppointmentRepository.FindByIdAsync(id);
             if (appoint == null)
             {
-                return NotFound("Appointment not found");
+                return NotFound("Id não encontrado");
             }
-            await _uow.AppointmentRepository.Update(id, appoint);
+            return Ok(appoint);
+
+        }
+
+        // POST api/<AppointmentController>
+        [HttpPost]
+        public async Task<ActionResult<Appointment>> Post([FromBody] Appointment appointment)
+        {
+            try
+            {
+                await _uow.AppointmentRepository.Create(appointment);
+            }
+            catch (DuplicateWaitObjectException ex) { return BadRequest(ex); }
+            _uow.Commit();
+            return Ok(appointment);
+        }
+
+        // PUT api/<AppointmentController>/5
+        [HttpPut("{id:guid}")]
+        public async Task<ActionResult<Appointment>> Put(Guid id, [FromBody] Appointment appointment)
+        {
+
+            if (appointment.AppointmentCode != id)
+            {
+                return NotFound("Id não encontrado");
+            }
+            await _uow.AppointmentRepository.Update(appointment);
             _uow.Commit();
             
             return Ok(appointment);
         }
 
         // DELETE api/<AppointmentController>/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(Guid id)
+        [HttpDelete("{id:guid}")]
+        public async Task<ActionResult<Appointment>> Delete(Guid id)
         {
-            var appoint = await _uow.AppointmentRepository.FindByIdAsync(id);
-            if (appoint == null)
+
+            var appointment = await _uow.AppointmentRepository.FindByIdAsync(id);
+            if (appointment == null)
             {
-                return NotFound("Appointment not found");
+                return NotFound("Id não encontrado");
             }
-            await _uow.AppointmentRepository.Delete(appoint);
+            var appoint = await _uow.AppointmentRepository.Delete(appointment);
             _uow.Commit();
             
-            return Ok(appoint);
+            return Ok("Deletado com sucesso");
         }
     }
 }

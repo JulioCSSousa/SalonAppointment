@@ -16,41 +16,36 @@ namespace SalonAppointment.Server.Repository
 
         public async Task<IEnumerable<Appointment>> FindAllAsync()
         {
-            return await _context.Appointments.AsNoTracking().ToListAsync();
+            return await _context.Appointments
+                .Include(x => x.Client)
+                .AsNoTracking()
+                .Take(10)
+                .ToListAsync();
         }
         public async Task<Appointment> FindByIdAsync(Guid id)
         {
-            var appointment = await _context.Appointments.FirstOrDefaultAsync(x => x.CodeId == id);
-            if (appointment == null)
-            {
-                throw new ArgumentNullException(nameof(appointment));
-            }
+            var appointment = await _context.Appointments.Include(c => c.Client).FirstOrDefaultAsync(x => x.AppointmentCode == id);
             return appointment;
         }
 
         public async Task<Appointment> Create(Appointment appointment)
-        { 
+        {
+
             await _context.AddAsync(appointment);
+            
             return appointment;
         }
        
-        public async Task<Appointment> Update(Guid id, Appointment appointment)
+        public async Task<Appointment> Update(Appointment appointment)
         {
-            var appointmentdb = await _context.Appointments.FirstOrDefaultAsync(x => x.CodeId == id);
-            if(appointment == null)
-            {
-                throw new NullReferenceException(nameof(appointmentdb));
-            }
-            _context.Appointments.Entry(appointment);
+            _context.Appointments.Entry(appointment).State = EntityState.Modified;
+
             return appointment;
         }
 
         public async Task<Appointment> Delete(Appointment appointment)
         {
-            if (appointment == null)
-            {
-                throw new NullReferenceException(nameof(appointment));
-            }
+
             _context.Appointments.Remove(appointment);
             return appointment;
         }

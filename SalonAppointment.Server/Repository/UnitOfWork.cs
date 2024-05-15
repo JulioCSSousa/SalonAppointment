@@ -10,7 +10,7 @@ namespace SalonAppointment.Server.Repository
 
         public IClientRepository _clientRepo;
 
-        public IServiceRepository _serviceRepo;
+        public IServiceRepository _serviceRepo; 
 
         public AppDbContext _context;
 

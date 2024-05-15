@@ -7,7 +7,7 @@ namespace SalonAppointment.Server.Repository.Interface
         Task<IEnumerable<Client>> FindAllAsync();
         Task<Client> FindByIdAsync(Guid id);
         Task<Client> Create(Client client);
-        Task<Client> Update(Guid id, Client client);
+        Task<Client> Update(Client client);
         Task<Client> Delete(Client client);
     }
 }

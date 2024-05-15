@@ -4,6 +4,7 @@ using SalonAppointment.Server.Data;
 using Microsoft.EntityFrameworkCore.Design;
 using SalonAppointment.Server.Repository.Interface;
 using SalonAppointment.Server.Repository;
+using System.Text.Json.Serialization;
 
 namespace SalonAppointment.Server
 {
@@ -25,7 +26,9 @@ namespace SalonAppointment.Server
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 
-            builder.Services.AddControllers();
+            builder.Services.AddControllers().AddJsonOptions(options 
+                => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

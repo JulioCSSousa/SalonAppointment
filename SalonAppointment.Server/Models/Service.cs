@@ -9,7 +9,7 @@ namespace SalonAppointment.Server.Models
         [Required(ErrorMessage = "Nome do serviço requerido")]
         [StringLength(50)]
         public string ServiceName { get; set; } = string.Empty;
-        [Column("decimal(12,8)")]
+        [Column(TypeName = "decimal(8,2)")]
         public decimal Price { get; set; }
 
     }

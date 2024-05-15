@@ -12,7 +12,7 @@ using SalonAppointment.Server.Data;
 namespace SalonAppointment.Server.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240514030303_initial")]
+    [Migration("20240514220459_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -27,7 +27,7 @@ namespace SalonAppointment.Server.Migrations
 
             modelBuilder.Entity("SalonAppointment.Server.Models.Appointment", b =>
                 {
-                    b.Property<Guid>("CodeId")
+                    b.Property<Guid>("AppointmentCode")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("char(36)");
 
@@ -38,9 +38,10 @@ namespace SalonAppointment.Server.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Observation")
-                        .HasColumnType("longtext");
+                        .HasMaxLength(300)
+                        .HasColumnType("varchar(300)");
 
-                    b.HasKey("CodeId");
+                    b.HasKey("AppointmentCode");
 
                     b.HasIndex("ClientId");
 
@@ -49,7 +50,7 @@ namespace SalonAppointment.Server.Migrations
 
             modelBuilder.Entity("SalonAppointment.Server.Models.Client", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<Guid>("ClientId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("char(36)");
 
@@ -63,7 +64,7 @@ namespace SalonAppointment.Server.Migrations
                         .HasMaxLength(12)
                         .HasColumnType("varchar(12)");
 
-                    b.HasKey("Id");
+                    b.HasKey("ClientId");
 
                     b.ToTable("Clients");
                 });
@@ -76,15 +77,8 @@ namespace SalonAppointment.Server.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<Guid?>("AppointmentCodeId")
-                        .HasColumnType("char(36)");
-
-                    b.Property<Guid?>("ClientId")
-                        .HasColumnType("char(36)");
-
                     b.Property<decimal>("Price")
-                        .HasColumnType("decimal(65,30)")
-                        .HasColumnName("decimal(12,8)");
+                        .HasColumnType("decimal(8,2)");
 
                     b.Property<string>("ServiceName")
                         .IsRequired()
@@ -92,10 +86,6 @@ namespace SalonAppointment.Server.Migrations
                         .HasColumnType("varchar(50)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("AppointmentCodeId");
-
-                    b.HasIndex("ClientId");
 
                     b.ToTable("Services");
                 });
@@ -109,27 +99,6 @@ namespace SalonAppointment.Server.Migrations
                         .IsRequired();
 
                     b.Navigation("Client");
-                });
-
-            modelBuilder.Entity("SalonAppointment.Server.Models.Service", b =>
-                {
-                    b.HasOne("SalonAppointment.Server.Models.Appointment", null)
-                        .WithMany("Service")
-                        .HasForeignKey("AppointmentCodeId");
-
-                    b.HasOne("SalonAppointment.Server.Models.Client", null)
-                        .WithMany("ServicesList")
-                        .HasForeignKey("ClientId");
-                });
-
-            modelBuilder.Entity("SalonAppointment.Server.Models.Appointment", b =>
-                {
-                    b.Navigation("Service");
-                });
-
-            modelBuilder.Entity("SalonAppointment.Server.Models.Client", b =>
-                {
-                    b.Navigation("ServicesList");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\julio\\source\\repos\\SalonAppointment\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{292C0F55-3546-49BF-8BC5-4B9E09063DDB}|SalonAppointment.Server\\SalonAppointment.Server.csproj|c:\\users\\julio\\source\\repos\\salonappointment\\salonappointment.server\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292C0F55-3546-49BF-8BC5-4B9E09063DDB}|SalonAppointment.Server\\SalonAppointment.Server.csproj|solutionrelative:salonappointment.server\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292C0F55-3546-49BF-8BC5-4B9E09063DDB}|SalonAppointment.Server\\SalonAppointment.Server.csproj|c:\\users\\julio\\source\\repos\\salonappointment\\salonappointment.server\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292C0F55-3546-49BF-8BC5-4B9E09063DDB}|SalonAppointment.Server\\SalonAppointment.Server.csproj|solutionrelative:salonappointment.server\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292C0F55-3546-49BF-8BC5-4B9E09063DDB}|SalonAppointment.Server\\SalonAppointment.Server.csproj|c:\\users\\julio\\source\\repos\\salonappointment\\salonappointment.server\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292C0F55-3546-49BF-8BC5-4B9E09063DDB}|SalonAppointment.Server\\SalonAppointment.Server.csproj|solutionrelative:salonappointment.server\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292C0F55-3546-49BF-8BC5-4B9E09063DDB}|SalonAppointment.Server\\SalonAppointment.Server.csproj|c:\\users\\julio\\source\\repos\\salonappointment\\salonappointment.server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{292C0F55-3546-49BF-8BC5-4B9E09063DDB}|SalonAppointment.Server\\SalonAppointment.Server.csproj|solutionrelative:salonappointment.server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292C0F55-3546-49BF-8BC5-4B9E09063DDB}|SalonAppointment.Server\\SalonAppointment.Server.csproj|c:\\users\\julio\\source\\repos\\salonappointment\\salonappointment.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292C0F55-3546-49BF-8BC5-4B9E09063DDB}|SalonAppointment.Server\\SalonAppointment.Server.csproj|solutionrelative:salonappointment.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292C0F55-3546-49BF-8BC5-4B9E09063DDB}|SalonAppointment.Server\\SalonAppointment.Server.csproj|c:\\users\\julio\\source\\repos\\salonappointment\\salonappointment.server\\repository\\appointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292C0F55-3546-49BF-8BC5-4B9E09063DDB}|SalonAppointment.Server\\SalonAppointment.Server.csproj|solutionrelative:salonappointment.server\\repository\\appointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292C0F55-3546-49BF-8BC5-4B9E09063DDB}|SalonAppointment.Server\\SalonAppointment.Server.csproj|c:\\users\\julio\\source\\repos\\salonappointment\\salonappointment.server\\repository\\clientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292C0F55-3546-49BF-8BC5-4B9E09063DDB}|SalonAppointment.Server\\SalonAppointment.Server.csproj|solutionrelative:salonappointment.server\\repository\\clientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppointmentController.cs",
+              "DocumentMoniker": "C:\\Users\\julio\\source\\repos\\SalonAppointment\\SalonAppointment.Server\\Controllers\\AppointmentController.cs",
+              "RelativeDocumentMoniker": "SalonAppointment.Server\\Controllers\\AppointmentController.cs",
+              "ToolTip": "C:\\Users\\julio\\source\\repos\\SalonAppointment\\SalonAppointment.Server\\Controllers\\AppointmentController.cs",
+              "RelativeToolTip": "SalonAppointment.Server\\Controllers\\AppointmentController.cs",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAcwEoAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T04:21:20.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\julio\\source\\repos\\SalonAppointment\\SalonAppointment.Server\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "SalonAppointment.Server\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\julio\\source\\repos\\SalonAppointment\\SalonAppointment.Server\\Properties\\launchSettings.json",
+              "RelativeToolTip": "SalonAppointment.Server\\Properties\\launchSettings.json",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAABoAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-15T04:12:56.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\julio\\source\\repos\\SalonAppointment\\SalonAppointment.Server\\Program.cs",
+              "RelativeDocumentMoniker": "SalonAppointment.Server\\Program.cs",
+              "ToolTip": "C:\\Users\\julio\\source\\repos\\SalonAppointment\\SalonAppointment.Server\\Program.cs",
+              "RelativeToolTip": "SalonAppointment.Server\\Program.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAgwB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T03:47:13.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClientController.cs",
+              "DocumentMoniker": "C:\\Users\\julio\\source\\repos\\SalonAppointment\\SalonAppointment.Server\\Controllers\\ClientController.cs",
+              "RelativeDocumentMoniker": "SalonAppointment.Server\\Controllers\\ClientController.cs",
+              "ToolTip": "C:\\Users\\julio\\source\\repos\\SalonAppointment\\SalonAppointment.Server\\Controllers\\ClientController.cs",
+              "RelativeToolTip": "SalonAppointment.Server\\Controllers\\ClientController.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAcwEMAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T03:16:08.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ServiceController.cs",
+              "DocumentMoniker": "C:\\Users\\julio\\source\\repos\\SalonAppointment\\SalonAppointment.Server\\Controllers\\ServiceController.cs",
+              "RelativeDocumentMoniker": "SalonAppointment.Server\\Controllers\\ServiceController.cs",
+              "ToolTip": "C:\\Users\\julio\\source\\repos\\SalonAppointment\\SalonAppointment.Server\\Controllers\\ServiceController.cs",
+              "RelativeToolTip": "SalonAppointment.Server\\Controllers\\ServiceController.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAowD8AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T18:48:03.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppointmentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\julio\\source\\repos\\SalonAppointment\\SalonAppointment.Server\\Repository\\AppointmentRepository.cs",
+              "RelativeDocumentMoniker": "SalonAppointment.Server\\Repository\\AppointmentRepository.cs",
+              "ToolTip": "C:\\Users\\julio\\source\\repos\\SalonAppointment\\SalonAppointment.Server\\Repository\\AppointmentRepository.cs",
+              "RelativeToolTip": "SalonAppointment.Server\\Repository\\AppointmentRepository.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAvwBMAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T03:55:52.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ClientRepository.cs",
+              "DocumentMoniker": "C:\\Users\\julio\\source\\repos\\SalonAppointment\\SalonAppointment.Server\\Repository\\ClientRepository.cs",
+              "RelativeDocumentMoniker": "SalonAppointment.Server\\Repository\\ClientRepository.cs",
+              "ToolTip": "C:\\Users\\julio\\source\\repos\\SalonAppointment\\SalonAppointment.Server\\Repository\\ClientRepository.cs",
+              "RelativeToolTip": "SalonAppointment.Server\\Repository\\ClientRepository.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T03:15:23.029Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

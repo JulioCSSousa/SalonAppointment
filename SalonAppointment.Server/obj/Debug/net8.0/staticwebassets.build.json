@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "j+Z8Shq8i3l2v1RZv3hzVrGaJfFLwU8XZ0zPDtmqtmU=",
+  "Hash": "mkpcfiKMuZUW9rxqcH3Ep3atLSqy6bI/cdvVcbYmNj4=",
   "Source": "SalonAppointment.Server",
   "BasePath": "_content/SalonAppointment.Server",
   "Mode": "Default",
@@ -11,10 +11,10 @@
       "Version": 2,
       "Source": "salonappointment.client",
       "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
       "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
     }
   ],
