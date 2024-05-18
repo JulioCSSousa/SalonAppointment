@@ -8,8 +8,8 @@ namespace SalonAppointment.Server.Models
     {
         [Key]
         public Guid AppointmentCode { get; set; } = Guid.NewGuid();
-        public Client Client { get; set; }
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
+        public Client? Client { get; set; } 
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd hh}")]
         public DateTime DataHora { get; set; }
         [StringLength(300)]
         public string? Observation { get; set; } = string.Empty;

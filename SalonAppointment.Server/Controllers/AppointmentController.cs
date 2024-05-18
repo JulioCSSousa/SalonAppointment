@@ -13,10 +13,12 @@ namespace SalonAppointment.Server.Controllers
     public class AppointmentController : ControllerBase
     {
         private readonly IUnitOfWork _uow;
+        private readonly ILogger _logger;
 
-        public AppointmentController(IUnitOfWork uow)
+        public AppointmentController(IUnitOfWork uow, ILogger<AppointmentController> logger)
         {
             _uow = uow;
+            _logger = logger;
         }
 
 

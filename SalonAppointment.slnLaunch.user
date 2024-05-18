@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Novo Perfil",
+    "Projects": [
+      {
+        "Name": "SalonAppointment.Server\\SalonAppointment.Server.csproj",
+        "Action": "Start"
+      },
+      {
+        "Name": "salonappointment.client\\salonappointment.client.esproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

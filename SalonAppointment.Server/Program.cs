@@ -12,7 +12,20 @@ namespace SalonAppointment.Server
     {
         public static void Main(string[] args)
         {
+
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddControllers();
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllOrigins",
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                               .AllowAnyMethod()
+                               .AllowAnyHeader();
+                    });
+            });
 
             // Add services to the container.
             string mySql = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -46,7 +59,7 @@ namespace SalonAppointment.Server
             }
 
             app.UseHttpsRedirection();
-
+            app.UseCors("AllowAllOrigins");
             app.UseAuthorization();
 
 
