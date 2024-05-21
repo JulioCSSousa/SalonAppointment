@@ -56,7 +56,7 @@ const Appointments: React.FC = () => {
                 disabled={loading}
             >
 
-            {loading ? 'Loading...' : 'Fetch Appointments'}
+            {loading ? 'Loading...' : 'Todos os agendamentos'}
             
             </Button>
             {error && <Typography color="error">{error}</Typography>}
